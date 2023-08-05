@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --transparent-color: rgba(0, 0, 0, 0.2);
+    --logo-color: rgba(0, 0, 0, 0.7);
+    --blue-color: rgb(21, 21, 143);
+    --main-font : 'Roboto Mono',
+        monospace;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-family:var(--main-font);
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    overflow-x: hidden;
+    position: relative;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    position: static;
+    z-index: 999;
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-family: 'Oswald', sans-serif;
+    color: var(--logo-color);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.6);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-transform: uppercase;
+}
+#search-inp{
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    align-self: center;
+    font-family: var(--main-font);
+}
+
+.period {
+    color: var(--blue-color);
+}
+
+.categories{
+    border: 1px solid var(--transparent-color);
+    display: flex;
+    align-items: baseline;
+    padding-left:2rem;
+    gap: 14rem;
+    position: relative;
+    border-radius: 2px;
+}
+.search-icon{
+    padding: 1rem;
+    background: var(--blue-color);
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    align-self: flex-end;
+    color: aliceblue;
+}
+i{
+    cursor: pointer;
+}
+
+input:focus {
+    &::-webkit-input-placeholder {
+        color: transparent;
+        -webkit-transition: color 0.2s ease;
+        transition: color 0.2s ease;
+    }
+}
+.fav-cart-1{
+    display: none;
+}
+.fav-cart-2{
+    display: flex;
+    gap: 1.2rem;
+    font-size: 2rem;
+    color: var(--logo-color);
+}
+@media (max-width: 768px){
+    .nav-bar{
+        flex-direction: column;
+
+    }
+    .logo{
+        font-size: 1.5rem;
+        align-self: center;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+        /* position: fixed; */
+        z-index: 999;
+    }
+    .categories{
+        gap: 1.3rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .fav-cart-2{
+       display: none;
+    }
+    .fav-cart-1{
+       display: inline-block;
+       align-self: baseline;
+       font-size: 1.45rem;
+    }
+.mobile-nav{
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    justify-content: space-between;
+}
+}
