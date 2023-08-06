@@ -5,9 +5,14 @@
 * {
     box-sizing: border-box;
 }
+*::selection{
+    background: var(--blue-color);
+    color: aliceblue;
+}
 
 :root {
     --transparent-color: rgba(0, 0, 0, 0.2);
+    --transparent-color-2: rgba(0, 0, 0, 0.1);
     --logo-color: rgba(0, 0, 0, 0.7);
     --blue-color: rgb(21, 21, 143);
     --main-font : 'Roboto Mono',
@@ -27,15 +32,14 @@ body {
     display: flex;
     flex-direction: row;
     align-items: baseline;
-    justify-content: space-between;
+    justify-content: space-around;
     overflow-x: hidden;
-    position: relative;
-    margin: 0;
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
-    position: static;
+    width: 100%;
+    position: fixed;
     z-index: 999;
+    border-bottom: 1px solid var(--transparent-color-2);
 }
 
 .logo {
@@ -99,13 +103,13 @@ input:focus {
 @media (max-width: 768px){
     .nav-bar{
         flex-direction: column;
-
+        border: none;
+        position: relative;
     }
     .logo{
         font-size: 1.5rem;
         align-self: center;
         border-bottom: 1px solid rgba(0, 0, 0, 0.6);
-        /* position: fixed; */
         z-index: 999;
     }
     .categories{
@@ -124,7 +128,9 @@ input:focus {
 .mobile-nav{
     display: flex;
     align-items: baseline;
-    width: 100%;
+    width: 90%;
     justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
 }
 }
