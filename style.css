@@ -27,6 +27,7 @@ body {
     flex-direction: column;
     overflow-x: hidden;
     font-family:var(--main-font);
+    
 }
 
 a{
@@ -75,8 +76,8 @@ a{
     border-radius: 2px;
 }
 .search-icon{
-    padding: 1rem;
-    background: var(--blue-color);
+    padding: 1.2rem;
+    background: black;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
     align-self: flex-end;
@@ -133,6 +134,11 @@ input:focus {
 .mobile-nav-btn{
     display: none;
 }
+.cancel-btn{
+    display: none;
+}
+
+/* For Mobile Devices */
 @media (max-width: 768px){
     .nav-bar{
         flex-direction: column;
@@ -173,5 +179,33 @@ input:focus {
 .mobile-nav-btn{
     display: block;
     font-size: 1.3rem;
+    
+}
+.categories-mobile{
+    display: none;
+    background: rgba(0, 0, 0, 0.99);
+    width: 65%;
+    z-index: 999;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    overflow-y: hidden;
+    
+}
+.category-mobile{
+    display: block;
+    padding: 15px 10px;
+    color: aliceblue;
+    border-bottom: 0.1px solid rgba(255, 255, 255, 0.7);
+}
+.cancel-btn{
+    display: none;
+    font-size: 2rem;
+    padding:0.65rem 1rem;
+    position: absolute;
+    left: 65%;
+    background: rgba(0, 0, 0, 0.99);
+    color: aliceblue;
 }
 }
