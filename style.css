@@ -25,9 +25,13 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
     font-family:var(--main-font);
 }
 
+a{
+    text-decoration: none;
+}
 .nav-bar {
     display: flex;
     flex-direction: row;
@@ -37,16 +41,14 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    position: fixed;
     z-index: 999;
-    border-bottom: 1px solid var(--transparent-color-2);
+    /* border-bottom: 1px solid var(--transparent-color-2); */
 }
 
 .logo {
     font-size: 2.2rem;
     font-family: 'Oswald', sans-serif;
     color: var(--logo-color);
-    border-bottom: 2px solid rgba(0, 0, 0, 0.6);
     padding-left: 1rem;
     padding-right: 1rem;
     text-transform: uppercase;
@@ -63,7 +65,7 @@ body {
     color: var(--blue-color);
 }
 
-.categories{
+.search-bar{
     border: 1px solid var(--transparent-color);
     display: flex;
     align-items: baseline;
@@ -100,19 +102,50 @@ input:focus {
     font-size: 2rem;
     color: var(--logo-color);
 }
+.categories{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 3rem;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.categories > a{
+    color: black;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+.categories>a:hover{
+    color: rgb(21, 21, 193);
+}
+
+.categories>a:nth-of-type(6){
+    border-right: 0;
+}
+.categories-mobile{
+    display: none;
+}
+.mobile-nav-btn{
+    display: none;
+}
 @media (max-width: 768px){
     .nav-bar{
         flex-direction: column;
         border: none;
         position: relative;
+        
     }
     .logo{
         font-size: 1.5rem;
-        align-self: center;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.6);
-        z-index: 999;
+        border-bottom: none;
+        padding-left: 3rem;
     }
-    .categories{
+    .search-bar{
         gap: 1.3rem;
         margin-left: auto;
         margin-right: auto;
@@ -123,7 +156,7 @@ input:focus {
     .fav-cart-1{
        display: inline-block;
        align-self: baseline;
-       font-size: 1.45rem;
+       font-size: 1.2rem;
     }
 .mobile-nav{
     display: flex;
@@ -132,5 +165,13 @@ input:focus {
     justify-content: space-between;
     margin-left: auto;
     margin-right: auto;
+}
+.categories{
+    display: none;
+}
+
+.mobile-nav-btn{
+    display: block;
+    font-size: 1.3rem;
 }
 }
