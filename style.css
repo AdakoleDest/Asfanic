@@ -27,7 +27,6 @@ body {
     flex-direction: column;
     overflow-x: hidden;
     font-family:var(--main-font);
-    
 }
 
 a{
@@ -43,7 +42,6 @@ a{
     margin-right: auto;
     width: 100%;
     z-index: 999;
-    /* border-bottom: 1px solid var(--transparent-color-2); */
 }
 
 .logo {
@@ -192,14 +190,20 @@ input:focus {
     top: 0px;
     left: 0;
     overflow-y: hidden;
-    
+    transform: translateX(0%);
 }
+
+
 .category-mobile{
     display: block;
     padding: 15px 10px;
     color: aliceblue;
     border-bottom: 0.1px solid rgba(255, 255, 255, 0.7);
-    
+}
+.category-mobile:hover,
+.category-mobile:focus,
+.categories-mobile:visited{
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .categories-mobile > .logo {
@@ -216,6 +220,6 @@ input:focus {
     position: absolute;
     top : 1.2rem;
     font-size: 2rem;
-    left: .5rem;
+    left: .8rem;
 }
 }
