@@ -4,12 +4,13 @@ const cancelBtn = document.querySelector(".cancel-btn");
 
 navBtn.onclick = function(){
    
-    categoriesMobile.style.display = "block";
+    categoriesMobile.style.transform = "translateX(0%)";
     navBtn.style.display = "none";
     cancelBtn.style.display = "block";
 }
+
 cancelBtn.onclick = function(){
-    categoriesMobile.style.display = "none";
+    categoriesMobile.style.transform = "translateX(-100%)";
     navBtn.style.display = "block";
     cancelBtn.style.display = "none";
 }
