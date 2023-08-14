@@ -12,9 +12,9 @@
 }
 
 :root {
-    --transparent-color: rgba(0, 0, 0, 0.2);
+    --transparent-color: rgba(0, 0, 0, 0.1);
     --transparent-color-2: rgba(0, 0, 0, 0.1);
-    --logo-color: rgba(0, 0, 0, 0.7);
+    --logo-color: rgb(0, 0, 0);
     --blue-color: rgb(21, 21, 143);
     --main-font: 'Roboto Mono',
         monospace;
@@ -62,10 +62,6 @@ a {
     font-size: 1rem;
     align-self: center;
     font-family: var(--main-font);
-}
-
-.period {
-    color: var(--blue-color);
 }
 
 .search-bar {
@@ -151,7 +147,7 @@ input:focus {
 }
 
 /* For Mobile Devices */
-@media (max-width: 768px) {
+@media (max-width: 814px) {
     .nav-bar {
         flex-direction: column;
         border: none;
@@ -210,6 +206,7 @@ input:focus {
         background: rgba(0, 0, 0, .99);
         transform: translateX(-100%);
         transition: transform 0.4s ease-in;
+        position: fixed;
     }
 
 
@@ -241,5 +238,41 @@ input:focus {
         top: 1.2rem;
         font-size: 2rem;
         left: .8rem;
+    }
+}
+@media (max-width: 425px){
+    .search-bar{
+       display: none;
+    }
+        .logo {
+            font-size: 1.2rem;
+        }
+        i{
+            font-size: 1rem;
+        }
+        .mobile-nav-btn{
+            font-size: 1rem;
+        }
+        .category-mobile{
+            font-size: .75rem;
+        }
+        .cancel-btn{
+            font-size: 1.3rem;
+        }
+        .categories-mobile>.logo{
+            font-size: 1.2rem;
+            margin-left: 3.4rem;
+        }
+}
+
+@media (min-width: 815px) and (max-width: 1020px) {
+    .categories>a{
+        font-size: .82rem;
+    }
+    .logo{
+        font-size: 1.7rem;
+    }
+    .search-bar{
+        gap: 5rem;
     }
 }
